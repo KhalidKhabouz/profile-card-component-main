@@ -1,0 +1,148 @@
+@import "fonts";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $darkCyan;
+  background-image:
+    url('../../images/bg-pattern-top.svg'),
+    url('../../images/bg-pattern-bottom.svg');
+  background-position:
+    left -20rem top -35rem,
+    right -18rem bottom -42rem;
+  background-repeat: no-repeat;
+  font-family: $kumbhSans;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+
+ 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 21.875rem; // 350px
+  background-color: $white;
+  border-radius: .675rem; // 10px
+
+  &__header {
+    position: relative;
+    width: 100%;
+    height: 8.75rem; // 140px
+    background-image: url('../../images/bg-pattern-card.svg');
+    border-top-right-radius: .675rem; // 10px
+    border-top-left-radius: .675rem; // 10px
+
+    img {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border: .3125rem solid $white; // 5px
+      border-radius: 50%;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    padding: 4.5rem 4.375rem 1.5rem;  // 72px 70px 24px
+    border-bottom: .0625rem solid rgba($darkGray, 0.3); // 1px
+    text-align: center;
+    
+
+    &-name {
+      font-size: 1.125rem; // 18px
+      color: $veryDarkDesaturatedBlue;
+      padding-bottom: .5rem // 8px
+    }
+
+    &-name {
+
+      span {
+        font-weight: normal;
+        color: $darkGray;
+      }
+    }
+
+    &-location {
+      color: $darkGray;
+      font-size: .875rem; // 14px
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    // justify-content: space-between;
+    // justify-content: space-evenly;
+    //justify-content: space-between;
+    padding: 1.5rem 1.25rem; // 24px 20px
+    text-align: center;
+
+    .stats {
+      text-transform: uppercase;
+    }
+
+    .stats h2{
+      font-size: 1.125rem; // 18px
+      color: $veryDarkDesaturatedBlue;
+      margin-bottom: .1875rem; // 3px
+
+    }
+
+    .stats p {
+      font-size: .6875rem; // 11px
+      text-transform: capitalize;
+      color: $darkGray;
+      letter-spacing: 0.05rem;
+    }
+
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  .attribution {
+    font-size: .6875rem; // 11px
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+
+@media (max-width: 23.4375rem) { // 375px
+
+  body {
+    background-position:
+    left -48rem top -38rem,
+    right -45rem bottom -40rem;
+  }
+
+  .card {
+    width: 20.3125rem; // 325px
+  }
+}
